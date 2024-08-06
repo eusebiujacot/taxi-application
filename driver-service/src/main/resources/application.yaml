@@ -8,11 +8,14 @@ spring:
     password: 100369707
     driver-class-name: org.postgresql.Driver
 
-#  liquibase:
-#    change-log: classpath:db/changelog/changelog-master.xml
-#    drop-first: true
+  liquibase:
+    change-log: classpath:db/changelog/changelog-master.xml
+    drop-first: true
 
   jpa:
     open-in-view: true
     hibernate:
       ddl-auto: update
+
+server:
+  port: 8081

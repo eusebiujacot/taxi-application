@@ -15,36 +15,36 @@ import java.util.UUID;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-//@Table(name = "drivers")
+@Table(name = "drivers")
 public class Driver {
 
     @Id
-//    @Column(name = "id")
+    @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.UUID)
     private UUID id;
 
-//    @Column(name = "first_name")
+    @Column(name = "first_name")
     private String firstName;
 
-//    @Column(name = "last_name")
+    @Column(name = "last_name")
     private String lastName;
 
-//    @Column(name = "email")
+    @Column(name = "email")
     private String email;
 
-//    @Column(name = "phone")
+    @Column(name = "phone")
     private String phone;
 
-//    @Column(name = "address")
+    @Column(name = "address")
     private String address;
 
-//    @Column(name = "city")
+    @Column(name = "city")
     private String city;
 
-//    @Column(name = "country")
+    @Column(name = "country")
     private String country;
 
-//    @Column(name = "zip")
+    @Column(name = "zip")
     private String zip;
 
     @CreationTimestamp
