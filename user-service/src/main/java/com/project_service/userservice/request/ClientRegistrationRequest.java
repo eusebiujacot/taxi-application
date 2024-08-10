@@ -1,5 +1,6 @@
-package com.neoxcode.userservice.request;
+package com.project_service.userservice.request;
 
+import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Pattern;
 import jakarta.validation.constraints.Size;
@@ -10,6 +11,8 @@ public record ClientRegistrationRequest(
         @Pattern(regexp = "^\\p{L}+$", message = "First name must contain only letters")
         String username,
 
+        @NotBlank(message = "Email cannot be empty")
+        @Email(message = "Email should be valid" )
         String email,
 
         @NotBlank(message = "Can not be empty")

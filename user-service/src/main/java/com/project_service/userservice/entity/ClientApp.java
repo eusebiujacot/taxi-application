@@ -1,4 +1,4 @@
-package com.neoxcode.userservice.entity;
+package com.project_service.userservice.entity;
 
 import jakarta.persistence.*;
 import lombok.*;
@@ -15,19 +15,24 @@ import java.util.UUID;
 @Entity
 @NoArgsConstructor
 @AllArgsConstructor
-public class Client {
+public class ClientApp {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
     private UUID id;
 
     @Column(nullable = false, unique = true)
     private String userName;
+
     private String firstName;
+
     private String lastName;
+
     @Column(nullable = false, unique = true)
     private String email;
+
     @Column(nullable = false)
     private String password;
+
     private String phoneNumber;
     private String address;
     private String city;
@@ -37,17 +42,17 @@ public class Client {
     @Column(nullable = false, updatable = false)
     private LocalDateTime createdAt;
     @UpdateTimestamp
-    @Column(nullable = false, updatable = true)
+    @Column(nullable = false)
     private LocalDateTime updatedAt;
 
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Client client = (Client) o;
-        return Objects.equals(id, client.id) && Objects.equals(firstName,
-                client.firstName) && Objects.equals(lastName, client.lastName) && Objects.equals(email,
-                client.email) && Objects.equals(phoneNumber, client.phoneNumber);
+        ClientApp clientApp = (ClientApp) o;
+        return Objects.equals(id, clientApp.id) && Objects.equals(firstName,
+                clientApp.firstName) && Objects.equals(lastName, clientApp.lastName) && Objects.equals(email,
+                clientApp.email) && Objects.equals(phoneNumber, clientApp.phoneNumber);
     }
 
     @Override
