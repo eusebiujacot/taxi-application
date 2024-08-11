@@ -43,8 +43,20 @@ databaseChangeLog:
                   name: zip
                   type: VARCHAR(20)
               - column:
+                  name: license_number
+                  type: varchar(20)
+              - column:
+                  name: vehicle_id
+                  type: UUID
+              - column:
+                  name: rating
+                  type: decimal(1,1)
+              - column:
                   name: created_at
                   type: timestamp
               - column:
                   name: updated_at
                   type: timestamp
+              - column:
+                  name: is_active
+                  type: boolean

@@ -47,11 +47,25 @@ public class Driver {
     @Column(name = "zip")
     private String zip;
 
+    @Column(name = "license_number")
+    private String licenseNumber;
+
+    @Column(name = "vehicle_id")
+    private UUID vehicleId;
+
+    @Column(name = "rating")
+    private Double rating;
+
     @CreationTimestamp
+    @Column(name = "created_at")
     private LocalDateTime createdAt;
 
     @UpdateTimestamp
+    @Column(name = "updated_at")
     private LocalDateTime updatedAt;
+
+    @Column(name = "is_active")
+    private Boolean isActive;
 
     @Override
     public String toString() {
@@ -65,6 +79,12 @@ public class Driver {
                 ", city='" + city + '\'' +
                 ", country='" + country + '\'' +
                 ", zip='" + zip + '\'' +
+                ", licenseNumber='" + licenseNumber + '\'' +
+                ", vehicleId=" + vehicleId +
+                ", rating=" + rating +
+                ", createdAt=" + createdAt +
+                ", updatedAt=" + updatedAt +
+                ", isActive=" + isActive +
                 '}';
     }
 
@@ -73,13 +93,12 @@ public class Driver {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Driver driver = (Driver) o;
-        return Objects.equals(id, driver.id) && Objects.equals(firstName,
-                driver.firstName) && Objects.equals(lastName, driver.lastName) && Objects.equals(email,
+        return Objects.equals(id, driver.id) && Objects.equals(email,
                 driver.email) && Objects.equals(phone, driver.phone);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, firstName, lastName, email, phone);
+        return Objects.hash(id, email, phone);
     }
 }
