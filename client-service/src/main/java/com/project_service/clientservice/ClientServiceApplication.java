@@ -1,13 +1,14 @@
-package com.neoxcode.userservice;
+package com.project_service.clientservice;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class UserServiceApplication {
+public class ClientServiceApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(UserServiceApplication.class, args);
+
+        SpringApplication.run(ClientServiceApplication.class, args);
     }
 
 }

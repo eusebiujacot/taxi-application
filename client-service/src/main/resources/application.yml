@@ -1,0 +1,22 @@
+server:
+  port: 8082
+  error:
+    include-message: always
+    include-binding-errors: always
+
+spring:
+  main:
+    banner-mode: off
+  application:
+    name: client-service
+  datasource:
+    username: ${SPRING_DATASOURCE_USER}
+    url: ${SPRING_DATASOURCE_URL}
+    password: ${SPRING_DATASOURCE_PASSWORD}
+  driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+

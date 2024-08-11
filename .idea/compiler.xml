@@ -9,15 +9,15 @@
         <outputRelativeToContentRoot value="true" />
         <module name="auth" />
         <module name="driver-service" />
-        <module name="user-service" />
+        <module name="client-service" />
       </profile>
     </annotationProcessing>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="auth" options="-parameters" />
+      <module name="client-service" options="-parameters" />
       <module name="driver-service" options="-parameters" />
-      <module name="user-service" options="-parameters" />
     </option>
   </component>
 </project>
